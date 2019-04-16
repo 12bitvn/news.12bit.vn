@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "make hugo"
+command = "make build"
 
 [context.production.environment]
 HUGO_VERSION = "0.55.1"
@@ -8,20 +8,20 @@ HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 
 [context.split1]
-command = "make hugo"
+command = "make build"
 
 [context.split1.environment]
 HUGO_VERSION = "0.55.1"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "make hugo"
+command = "make build"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.55.1"
 
 [context.branch-deploy]
-command = "make hugo"
+command = "make build"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.55.1"
