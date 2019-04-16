@@ -1,0 +1,10 @@
+name: news.12bit.vn
+license: MIT
+description: Theme for news.12bit.vn
+homepage: 'https://news.12bit.vn/'
+tags: []
+features: []
+min_version: '0.41'
+author:
+  name: 12bit
+  homepage: 'https://12bit.vn'
