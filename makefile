@@ -1,30 +1,8 @@
-[build]
-publish = "public"
-command = "hugo"
+build:
+	rm -rf ./public && hugo  --gc --minify --buildFuture --enableGitInfo
 
-[context.production.environment]
-HUGO_VERSION = "0.48"
-HUGO_ENV = "production"
-HUGO_ENABLEGITINFO = "true"
+preview: build
+	netlify deploy
 
-[context.split1]
-command = "hugo --enableGitInfo"
-
-[context.split1.environment]
-HUGO_VERSION = "0.48"
-HUGO_ENV = "production"
-
-[context.deploy-preview]
-command = "hugo --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.deploy-preview.environment]
-HUGO_VERSION = "0.48"
-
-[context.branch-deploy]
-command = "hugo -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy.environment]
-HUGO_VERSION = "0.48"
-
-[context.next.environment]
-HUGO_ENABLEGITINFO = "true"
+deploy: build
+	netlify deploy --prod
