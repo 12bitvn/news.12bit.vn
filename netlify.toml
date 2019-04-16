@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-functions = "function"
+functions = "functions"
 command = "build"
 
 [build.environment]
