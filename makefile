@@ -1,5 +1,5 @@
 build-site:
-	hugo --gc --minify --buildFuture --enableGitInfo
+	hugo
 build: build-site
 	mkdir -p functions
 	go get ./...
