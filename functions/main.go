@@ -1,4 +1,4 @@
-package main
+package main // import 12bit.vn/go/news.12bit.vn
 
 import (
 	"github.com/aws/aws-lambda-go/events"

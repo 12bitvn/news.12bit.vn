@@ -1,5 +1,5 @@
 build:
 	hugo  --gc --minify --buildFuture --enableGitInfo && \
 	cd ./functions && \
-	go get ./... &&\
+	go mod download &&\
 	go build -o crawl-news main.go
