@@ -5,9 +5,36 @@
 
 [build.environment]
   GO_IMPORT_PATH = "github.com/12bitvn/news.12bit.vn"
-  HUGO_VERSION = "0.48"
-  HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
+
+[context.production.environment]
+    HUGO_VERSION = "0.53"
 
 [context.deploy-preview]
     command = "make build --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.production.environment]
+    HUGO_VERSION = "0.55.1"
+    HUGO_ENV = "production"
+    HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+    command = "make build"
+
+[context.split1.environment]
+    HUGO_VERSION = "0.55.1"
+    HUGO_ENV = "production"
+
+[context.deploy-preview]
+    command = "make build"
+
+[context.deploy-preview.environment]
+    HUGO_VERSION = "0.55.1"
+
+[context.branch-deploy]
+    command = "make build"
+
+[context.branch-deploy.environment]
+    HUGO_VERSION = "0.55.1"
+
+[context.next.environment]
+    HUGO_ENABLEGITINFO = "true"

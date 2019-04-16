@@ -1,5 +1,5 @@
 build-site:
-	hugo
+	hugo --gc --minify
 build: build-site
 	mkdir -p functions
 	go get ./...
