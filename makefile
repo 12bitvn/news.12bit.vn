@@ -1,8 +1,6 @@
-build:
-	rm -rf ./public && hugo  --gc --minify --buildFuture --enableGitInfo
-
-preview: build
-	netlify deploy
-
-deploy: build
-	netlify deploy --prod
+build-site:
+	hugo
+build: build-site
+	mkdir -p functions
+	go get ./...
+	go build -o functions/crawl-news ./...
