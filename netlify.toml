@@ -1,7 +1,7 @@
 [build]
-publish = "public"
-functions = "functions"
-command = "build"
+    publish = "public"
+    functions = "functions"
+    command = "make build"
 
 [build.environment]
   GO_IMPORT_PATH = "github.com/12bitvn/news.12bit.vn"
@@ -10,4 +10,4 @@ command = "build"
   HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
-command = "hugo --buildFuture -b $DEPLOY_PRIME_URL"
+    command = "hugo --buildFuture -b $DEPLOY_PRIME_URL"
