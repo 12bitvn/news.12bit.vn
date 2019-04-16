@@ -1,4 +1,6 @@
-build:
-	hugo  --gc --minify --buildFuture --enableGitInfo && \
-	go get ./... &&\
-	go build -o ./bin/crawl-news main.go
+build-site:
+	hugo --gc --minify --buildFuture --enableGitInfo
+build: build-site
+	mkdir -p functions
+	go get ./...
+	go build -o functions/crawl-news ./...
