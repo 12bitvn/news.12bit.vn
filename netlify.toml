@@ -10,4 +10,4 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
-    command = "hugo --buildFuture -b $DEPLOY_PRIME_URL"
+    command = "make build --buildFuture -b $DEPLOY_PRIME_URL"
