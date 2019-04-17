@@ -20,7 +20,7 @@ import (
 var feedParser = gofeed.NewParser()
 
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	files, err := ioutil.ReadDir("./")
+	files, err := ioutil.ReadDir("./../")
 	if err != nil {
 		log.Fatal(err)
 	}
