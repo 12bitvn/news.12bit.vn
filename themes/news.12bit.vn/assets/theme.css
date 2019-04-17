@@ -48,6 +48,7 @@ a {
 
 .links {
   counter-reset: my-counter;
+  margin-bottom: 3rem;
 }
 
 .link {
@@ -56,10 +57,6 @@ a {
   text-decoration: none;
   position: relative;
   padding-left: 45px;
-}
-
-.link:hover h1 {
-  text-decoration: underline;
 }
 
 .link:before {
@@ -71,11 +68,16 @@ a {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--darker);
+  font-style: italic;
 }
 
 .link h1 {
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+.link:hover h1 {
+  text-decoration: underline;
 }
 
 .link .meta {
@@ -85,4 +87,29 @@ a {
 
 .link .meta * {
   margin-right: 10px;
+}
+
+/** Pagination **/
+.pagination {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.pagination li {
+  margin-right: 10px;
+}
+
+.pagination a {
+  display: block;
+  text-decoration: none;
+  border: 2px solid var(--link);
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.pagination a:hover,
+.pagination li.active a {
+  background-color:   var(--link);
+  color: #fff;
 }

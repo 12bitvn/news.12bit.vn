@@ -36,41 +36,22 @@
       <a class="button" href="{{ .Site.Params.cta.url }}" target="_blank">
         {{ .Site.Params.cta.title }}
       </a>
-    </header>
+    </header><!-- end #masthead -->
     <main id="content">
       <div class="links">
-        <a href="" class="link">
-          <h1>Tìm hiểu Webpack: Cấu hình entry và output</h1>
+        {{ $paginator := .Paginate (where .Pages "Type" "links") }}
+        {{ range $paginator.Pages }}
+        <a href="{{ .Params.link }}" class="link" target="_blank">
+          <h1>{{ .Title }}</h1>
           <div class="meta">
-            <span class="date">Ngày: 10-04-2019</span>
-            <span class="site-name">Đăng bởi: 12bit.vn</span>
+            <span class="date">Ngày: {{ .Date.Format "02-01-2006" }}</span>
+            <span class="site-name">Đăng bởi: {{ .Params.site }}<span>
           </div>
         </a>
-
-        <a href="" class="link">
-          <h1>Tìm hiểu Webpack: Cấu hình entry và output</h1>
-          <div class="meta">
-            <span class="date">Ngày: 10-04-2019</span>
-            <span class="site-name">Đăng bởi: 12bit.vn</span>
-          </div>
-        </a>
-        <a href="" class="link">
-            <h1>Tìm hiểu Webpack: Cấu hình entry và output</h1>
-            <div class="meta">
-              <span class="date">Ngày: 10-04-2019</span>
-              <span class="site-name">Đăng bởi: 12bit.vn</span>
-            </div>
-          </a>
-
-          <a href="" class="link">
-            <h1>Tìm hiểu Webpack: Cấu hình entry và output</h1>
-            <div class="meta">
-              <span class="date">Ngày: 10-04-2019</span>
-              <span class="site-name">Đăng bởi: 12bit.vn</span>
-            </div>
-          </a>
-      </div>
-    </main>
+        {{ end }}
+      </div><!-- end .links -->
+      {{ template "_internal/pagination.html" . }}
+    </main><!-- end #content -->
     <footer id="colophon"></footer>
   </div>
 </body>
