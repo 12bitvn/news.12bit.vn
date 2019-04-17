@@ -4,6 +4,8 @@ Browse multiple Vietnamese tech blogs at the same time.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/51d69537-8760-4eef-ad70-fead35768f13/deploy-status)](https://app.netlify.com/sites/jovial-spence-90afc6/deploys)
 
-## Add my site
+## Add your site
 
-If you have a blog, you can add your RSS link by contributing [this file](https://github.com/12bitvn/news.12bit.vn/blob/master/data/links.json)
+> Trust me, it's really simple. You don't need to inbox us.
+
+If you have a blog, you can add your RSS link into [this file](https://github.com/12bitvn/news.12bit.vn/blob/master/data/links.json), then create a pull request. We'll review it as soon as possible.
