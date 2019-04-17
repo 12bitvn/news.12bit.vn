@@ -60,7 +60,7 @@ a {
   margin-bottom: 2rem;
   text-decoration: none;
   position: relative;
-  padding-left: 45px;
+  padding-left: 70px;
 }
 
 .link:before {
@@ -75,9 +75,15 @@ a {
   font-style: italic;
 }
 
+.link:nth-child(n+1):nth-child(-n+9):before {
+  content: "0"counter(my-counter);
+}
+
+
 .link h1 {
   text-decoration: none;
   font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
 .link:hover h1 {
