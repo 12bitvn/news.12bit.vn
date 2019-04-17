@@ -24,8 +24,8 @@ draft: false
 
 var committer = "crawler"
 var committerEmail = "12bitsvn@gmail.com"
-var reponame = "12bitvn"
-var owner = "news.12bit.vn"
+var reponame = "news.12bit.vn"
+var owner = "12bitvn"
 var branch = "master"
 var path = "content/links"
 
