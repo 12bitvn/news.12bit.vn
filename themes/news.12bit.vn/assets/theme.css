@@ -68,6 +68,7 @@ a {
   margin-bottom: 3rem;
 }
 
+/** Link item **/
 .links {
   counter-reset: my-counter;
   margin-bottom: 3rem;
@@ -97,7 +98,7 @@ a {
   counter-increment: my-counter;
   position: absolute;
   left: 0;
-  top: -5px;
+  top: 0;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--darker);
@@ -113,7 +114,7 @@ a {
   text-decoration: none;
   font-size: 1.2rem;
   line-height: 1.8rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .link p {
