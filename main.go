@@ -9,10 +9,13 @@ import (
 	"github.com/google/go-github/github"
 	"github.com/gosimple/slug"
 	"github.com/mmcdole/gofeed"
+	"github.com/pkg/errors"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/mongo/readpref"
 	"golang.org/x/oauth2"
-	"io/ioutil"
-	"log"
-	"strings"
+	"os"
 	"text/template"
 	"time"
 )
@@ -20,18 +23,31 @@ import (
 var feedParser = gofeed.NewParser()
 
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	files, err := ioutil.ReadDir("./../games/")
+	mongoApplyURI, ok := os.LookupEnv("MONGODB_URI")
+	if !ok {
+		return events.APIGatewayProxyResponse{}, errors.New("MONGODB_URI is not defined")
+	}
+	client, err := mongo.NewClient(options.Client().ApplyURI(mongoApplyURI))
 	if err != nil {
-		log.Fatal(err)
+		return events.APIGatewayProxyResponse{}, err
+	}
+	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	if err := client.Connect(ctx); err != nil {
+		return events.APIGatewayProxyResponse{}, err
+	}
+	defer client.Disconnect(ctx)
+	if err := client.Ping(ctx, readpref.Primary()); err != nil {
+		return events.APIGatewayProxyResponse{}, err
 	}
 
-	filenames := []string{}
-	for _, f := range files {
-		filenames = append(filenames, f.Name())
+	linksCollection := client.Database("prod").Collection("links")
+	if _, err := linksCollection.InsertOne(ctx, bson.M{"name": "pi", "value": 3.14159}); err != nil {
+		return events.APIGatewayProxyResponse{}, err
 	}
+
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body:       strings.Join(filenames, ";"),
+		Body:       "success",
 	}, nil
 }
 
