@@ -20,7 +20,7 @@ params:
     - img/home.png
   cta:
     title: Add my site
-    url: 'https://github.com/12bitvn/news.12bit.vn'
+    url: 'https://github.com/12bitvn/news.12bit.vn/blob/master/data/links.json'
 blackfriday:
   hrefTargetBlank: true
   noreferrerLinks: true
