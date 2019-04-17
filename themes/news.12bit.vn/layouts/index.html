@@ -5,7 +5,7 @@
     {{ range $paginator.Pages }}
     <a href="{{ .Params.link }}" class="link" target="_blank">
       <h1>{{ .Title }}</h1>
-      <p>{{ .Description | truncate 120 }}</p>
+      <p>{{ .Description | safeHTML | truncate 120 }}</p>
       <div class="meta">
         {{ .Date.Format "02-01-2006" }} by {{ .Params.site }}
       </div>
