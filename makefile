@@ -1,6 +1,6 @@
-build-site:
-	hugo
-build: build-site
+hugo:
+	hugo --gc --minify
+build: hugo
 	mkdir -p functions
 	go get ./...
-	GOOS=linux go build -o functions/crawl-news ./...
+	go build -o functions/crawl-sites ./...
