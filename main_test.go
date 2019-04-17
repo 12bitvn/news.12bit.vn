@@ -1,30 +1,28 @@
 package main
 
 import (
-	"github.com/mmcdole/gofeed"
+	"reflect"
 	"testing"
-	"time"
 )
 
-func Test_createCommit(t *testing.T) {
+func Test_fetchSiteList(t *testing.T) {
 	type args struct {
-		accessToken string
-		feedItem    gofeed.Item
+		fileUrl string
 	}
-	now, _ := time.Parse(time.RFC3339, "2019-04-17 00:57:11 +0700")
 	tests := []struct {
 		name    string
 		args    args
+		want    []Site
 		wantErr bool
 	}{
 		{
-			name: "Invalid access token",
+			name: "case 1",
 			args: args{
-				accessToken: "fda8b31b2bcf7766ddfc029d67c94d148d2677d0",
-				feedItem: gofeed.Item{
-					Title:           "title",
-					Description:     "description",
-					PublishedParsed: &now,
+				fileUrl: "https://raw.githubusercontent.com/12bitvn/news.12bit.vn/1fc1fd073197714f5f053083bb8853e967a7a972/data/links-example.json",
+			},
+			want: []Site{
+				{
+					RssURL: "https://12bit.vn/index.xml",
 				},
 			},
 			wantErr: false,
@@ -32,8 +30,13 @@ func Test_createCommit(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := createCommit(tt.args.accessToken, tt.args.feedItem); (err != nil) != tt.wantErr {
-				t.Errorf("createCommit() error = %v, wantErr %v", err, tt.wantErr)
+			got, err := fetchSiteList(tt.args.fileUrl)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("fetchSiteList() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("fetchSiteList() = %v, want %v", got, tt.want)
 			}
 		})
 	}
