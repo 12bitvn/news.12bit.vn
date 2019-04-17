@@ -1,7 +1,6 @@
 [build]
 publish = "public"
 command = "make build"
-functions = "functions"
 
 [build.environment]
 GO_IMPORT_PATH = "github.com/12bitvn/news.12bit.vn"
