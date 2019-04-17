@@ -44,8 +44,7 @@
         <a href="{{ .Params.link }}" class="link" target="_blank">
           <h1>{{ .Title }}</h1>
           <div class="meta">
-            <span class="date">Ngày: {{ .Date.Format "02-01-2006" }}</span>
-            <span class="site-name">Đăng bởi: {{ .Params.site }}<span>
+            {{ .Date.Format "02-01-2006" }} by {{ .Params.site }}
           </div>
         </a>
         {{ end }}

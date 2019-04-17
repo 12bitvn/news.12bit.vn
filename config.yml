@@ -19,7 +19,7 @@ params:
   images:
     - img/home.png
   cta:
-    title: Thêm links
+    title: Add my site
     url: 'https://github.com/12bitvn/news.12bit.vn'
 blackfriday:
   hrefTargetBlank: true
