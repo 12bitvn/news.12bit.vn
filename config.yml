@@ -1,26 +1,26 @@
 languageCode: vi-vn
 copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
-title: 12bit.vn
-description: write and share to learn
+title: 12bit.vn links
+description: Tổng hợp link từ nhiều tech blog Tiếng Việt.
 baseURL: https://news.12bit.vn/
 theme: news.12bit.vn
 enableGitInfo: true
 enableEmoji: true
 enableRobotsTXT: true
-googleAnalytics: UA-131517577-1
+googleAnalytics:
 paginate: 40
 outputs:
   home:
   - HTML
   - RSS
 params:
-  description: write and share to learn
+  description: Tổng hợp link từ nhiều tech blog Tiếng Việt.
   favicon: img/favicon.png
   images:
     - img/home.png
   cta:
     title: Add my site
-    url: 'https://github.com/12bitvn/news.12bit.vn/blob/master/data/links.json'
+    url: 'https://github.com/12bitvn/news.12bit.vn'
 blackfriday:
   hrefTargetBlank: true
   noreferrerLinks: true
