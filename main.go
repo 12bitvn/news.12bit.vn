@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"context"
-	"errors"
 	"fmt"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -59,7 +58,7 @@ func commit(accessToken string, feed *gofeed.Feed) error {
 		Committer: &github.CommitAuthor{Name: github.String("vominh"), Email: github.String("nguyenvanduocit@gmail.com")},
 	}
 
-	if _, _, err := client.Repositories.CreateFile(ctx, "12bitvn", "news.12bit.vn", fmt.Sprintf("content/links/%s", generateFileName(feedItem)), opts); err != nil {
+	if _, _, err := client.Repositories.CreateFile(ctx, "12bitvn", "news.12bit.vn", fmt.Sprintf("content/links/%s", generateFileName(feed, feed.Items[0])), opts); err != nil {
 		return err
 	}
 	return nil
@@ -86,7 +85,7 @@ draft: false
 	return tpl.Bytes(), nil
 }
 
-func generateFileName(fieldItem gofeed.Item) string {
+func generateFileName(feed *gofeed.Feed, fieldItem *gofeed.Item) string {
 	return fmt.Sprintf("%s-%s.md", slug.Make(fieldItem.Title), fieldItem.PublishedParsed.Format(time.RFC3339))
 }
 
