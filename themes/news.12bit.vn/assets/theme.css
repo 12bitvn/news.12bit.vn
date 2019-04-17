@@ -17,6 +17,8 @@ a {
 #wrap {
   max-width: 600px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #masthead {
@@ -24,6 +26,8 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #masthead .logo svg {
@@ -43,7 +47,7 @@ a {
 }
 
 #content {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .links {
@@ -112,4 +116,11 @@ a {
 .pagination li.active a {
   background-color:   var(--link);
   color: #fff;
+}
+
+/** Footer **/
+#colophon {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: .8rem;
 }
