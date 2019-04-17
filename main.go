@@ -7,7 +7,6 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/google/go-github/github"
 	"github.com/mmcdole/gofeed"
-	"github.com/pkg/errors"
 	"golang.org/x/oauth2"
 	"net/http"
 	"os"
@@ -22,15 +21,10 @@ var siteFileUrl = "https://raw.githubusercontent.com/12bitvn/news.12bit.vn/1fc1f
 
 var feedParser = gofeed.NewParser()
 var httpClient = &http.Client{Timeout: 10 * time.Second}
-var githubClient *github.Client
+var accessToken, _ = os.LookupEnv("GITHUB_ACCESS_TOKEN")
+var githubClient = newithubClient(accessToken)
 
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	var accessToken, ok = os.LookupEnv("GITHUB_ACCESS_TOKEN")
-	if !ok {
-		return events.APIGatewayProxyResponse{}, errors.New("GITHUB_ACCESS_TOKEN is required")
-	}
-	githubClient = newGithubClient(accessToken)
-
 	sites, err := fetchSiteList(siteFileUrl)
 	if err != nil {
 		return events.APIGatewayProxyResponse{}, err
@@ -69,7 +63,7 @@ func fetchSiteList(fileUrl string) ([]Site, error) {
 	return sites, nil
 }
 
-func newGithubClient(accessToken string) *github.Client {
+func newithubClient(accessToken string) *github.Client {
 	ctx := context.Background()
 	ts := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: accessToken},
