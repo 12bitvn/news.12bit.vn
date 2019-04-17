@@ -3,7 +3,7 @@
   <div class="links">
     {{ $paginator := .Paginate (where .Pages "Type" "links") }}
     {{ range $paginator.Pages }}
-    <a href="{{ .Params.link }}" class="link" target="_blank">
+    <a href="{{ .Params.link }}" class="link" target="_blank" rel="nofollow noopener">
       <h1>{{ .Title }}</h1>
       <div class="meta">
         {{ .Date.Format "02-01-2006" }} by {{ .Params.site | replaceRE "^https?://([^/]+).*" "$1" }}
