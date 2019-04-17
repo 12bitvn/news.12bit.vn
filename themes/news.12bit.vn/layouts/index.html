@@ -14,7 +14,7 @@
   {{ end }}
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
-  {{ $mainStyle := resources.Get "theme.css" }}
+  {{ $mainStyle := resources.Get "theme.css" | minify }}
   <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}">
 </head>
 <body class="dark">
