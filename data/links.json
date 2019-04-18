@@ -22,5 +22,17 @@
   },
   {
     "rss_url": "https://alligator.io/feed.xml"
+  },
+  {
+    "rss_url":"https://www.smashingmagazine.com/feed/"
+  },
+  {
+    "rss_url":"https://www.smashingmagazine.com/feed/"
+  },
+  {
+    "rss_url": "https://huydx.com/rss"
+  },
+  {
+    "rss_url": "https://medium.com/feed/on-coding"
   }
 ]
