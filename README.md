@@ -6,7 +6,7 @@ Browse multiple Vietnamese tech blogs at the same time.
 
 ## Contribute
 
-### Prerequisite
+**Prerequisites**
 
 Since Netlify does not support Hugo extended version that allows Hugo converts SCSS to CSS. We need to use a task runner to convert SCSS. In this case, webpack is our first choice.
 
