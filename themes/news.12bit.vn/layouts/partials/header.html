@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
   {{ if eq (getenv "HUGO_ENV") "production" }}
-  {{ $mainStyle := resources.Get "theme.css" | minify }}
+  {{ $mainStyle := resources.Get "theme.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}">
   {{ end }}
 </head>

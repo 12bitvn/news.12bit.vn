@@ -3,7 +3,7 @@
 </footer>
 </div>
 {{ template "_internal/google_analytics_async.html" . }}
-{{ $mainScript := resources.Get "main.js" | minify }}
+{{ $mainScript := resources.Get "main.js" | minify | fingerprint }}
 <script defer src="{{ $mainScript.RelPermalink }}"></script>
 </body>
 </html>
