@@ -14,8 +14,10 @@
   {{ end }}
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+  {{ if eq (getenv "HUGO_ENV") "production" }}
   {{ $mainStyle := resources.Get "theme.css" | minify }}
   <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}">
+  {{ end }}
 </head>
 <body class="dark">
   <div id="wrap">

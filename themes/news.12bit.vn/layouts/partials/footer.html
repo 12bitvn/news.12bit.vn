@@ -1,6 +1,9 @@
 <footer id="colophon">
-    <p>made with ☕ by <a href="https://12bit.vn" target="_blank">12bit.vn</a></p>
-  </footer>
+  <p>made with ☕ by <a href="https://12bit.vn" target="_blank">12bit.vn</a></p>
+</footer>
 </div>
+{{ template "_internal/google_analytics_async.html" . }}
+{{ $mainScript := resources.Get "main.js" | minify }}
+<script defer src="{{ $mainScript.RelPermalink }}"></script>
 </body>
 </html>
