@@ -51,7 +51,8 @@ a {
     text-decoration: none;
     border: 2px solid var(--link);
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 8px 20px;
+    font-weight: 700;
     &:hover {
       color: #fff;
       background-color: var(--link);
