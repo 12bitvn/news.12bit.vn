@@ -1,8 +1,8 @@
 .dark {
-  --bg: #1D2227;
-  --darker: #13161a;
+  --bg: #1a1f23;
+  --darker: #101518;
   --text: #aeadad;
-  --link: #5b84fc;
+  --link: #0cc387;
 }
 
 body {
@@ -79,7 +79,7 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   &:hover {
-    background-color: #13161a59;
+    background-color: #101518;
     h1 {
       text-decoration: underline;
     }
@@ -91,8 +91,7 @@ a {
     left: 0;
     top: 0;
     font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--darker);
+    font-weight: 300;
     font-style: italic;
   }
   &:nth-child(n+1):nth-child(-n+9):before {
