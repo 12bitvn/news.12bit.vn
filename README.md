@@ -4,6 +4,8 @@ Browse multiple Vietnamese tech blogs at the same time.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/51d69537-8760-4eef-ad70-fead35768f13/deploy-status)](https://app.netlify.com/sites/jovial-spence-90afc6/deploys)
 
+![featured-image](https://user-images.githubusercontent.com/3280351/56430895-1a0a4880-62f2-11e9-98b2-d3bb66ae80ab.png)
+
 ## Contributing
 
 **Prerequisites**
