@@ -2,13 +2,14 @@ import './scss/theme.scss'
 import octicons from 'octicons'
 import Bookmark from './bookmark'
 
-const toggleDropdown = () => {
-  let bookmarkNode = document.querySelector('.bookmark')
-  if (!bookmarkNode.classList.contains('show')) {
-    bookmarkNode.classList.add('show')
-  } else {
-    bookmarkNode.classList.remove('show')
-  }
+let bookmarkNode = document.querySelector('.bookmark')
+
+const showDropdown = () => {
+  bookmarkNode.classList.add('show')
+}
+
+const hideDropdown = () => {
+  bookmarkNode.classList.remove('show')
 }
 
 // Generate octicons
@@ -33,8 +34,19 @@ b.data.items.forEach(item => {
   })
 })
 
+// Toggle show/hide dropdown
 document.querySelector('.js-b-indicator').addEventListener('click', () => {
-  toggleDropdown()
+  if (!bookmarkNode.classList.contains('show')) {
+    showDropdown()
+  } else {
+    hideDropdown()
+  }
+})
+
+document.addEventListener('click', (e) => {
+  if (!bookmarkNode.contains(e.target)) {
+    hideDropdown()
+  }
 })
 
 // Add/remove bookmark
@@ -77,11 +89,11 @@ document.querySelectorAll('.js-b-additem').forEach(node => {
 
 // Remove bookmark in the dropdown list.
 document.addEventListener('click', (e) => {
-  e.preventDefault()
-
   if ( ! e.target.classList.contains('js-b-dropdown-remove-bookmark') ) {
     return
   }
+
+  e.preventDefault()
 
   let items = b.data.items.filter(item => {
     return item.link !== e.target.getAttribute('data-id')
