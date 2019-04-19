@@ -38,15 +38,21 @@ const Bookmark = (dataObj) => {
 
     // render bookmark items
     if (count === 0) {
-      dropdownNode.innerHTML = '<span class="no-item">No bookmark items found.</span>'
+      dropdownNode.innerHTML = `
+      <p class="no-item">
+        <span>No bookmark items found.</span>
+      </p>
+      `
     } else {
       let html = ''
       obj.items.forEach(item => {
         html += `
-        <a href="${item.link}" class="link" target="_blank" rel="nofollow noopener">
-          <h1>${item.title}</h1>
-          <div class="meta">${item.date} by ${item.site}</div>
-        </a>
+        <div class="link" >
+          <h1><a href="${item.link}" target="_blank" rel="nofollow noopener">${item.title}</h1>
+          <div class="meta">
+            <a href="http://${item.site}" target="_blank" rel="nofollow noopener">${item.site}</a> | <a href="#" class="js-b-dropdown-remove-bookmark" data-id="${item.link}">remove</a>
+          </div>
+        </div>
         `
       });
       dropdownNode.innerHTML = html

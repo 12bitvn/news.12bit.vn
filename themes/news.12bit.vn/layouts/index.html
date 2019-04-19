@@ -3,20 +3,23 @@
   <div class="links">
     {{ $paginator := .Paginate (where .Pages "Type" "links") }}
     {{ range $paginator.Pages }}
-    <a href="{{ .Params.link }}" class="link" target="_blank" rel="nofollow noopener">
-      <h1>{{ .Title }}</h1>
+    <div class="link" target="_blank" rel="nofollow noopener">
+      <h1><a href="{{ .Params.link }}" target="_blank" rel="nofollow noopener">{{ .Title }}</a></h1>
       <div class="meta">
-        {{ .Date.Format "02-01-2006" }} by {{ .Params.site | replaceRE "^https?://([^/]+).*" "$1" }}
+        <span>{{ .Date.Format "02-01-2006" }} by <a href="http://{{ .Params.site }}" target="_blank" rel="nofollow noopener">{{ .Params.site }}</a></span>
+        <span> | </span>
+        <a
+          href="#"
+          class="js-b-additem save"
+          data-icon="star"
+          data-link="{{ .Params.link }}"
+          data-title={{ .Title }}
+          data-date='{{ .Date.Format "02-01-2006" }}'
+          data-site='{{ .Params.site | replaceRE "^https?://([^/]+).*" "$1" }}'>
+          bookmark
+        </a>
       </div>
-      <span
-        class="octicon js-b-additem"
-        data-icon="star"
-        data-link="{{ .Params.link }}"
-        data-title={{ .Title }}
-        data-date='{{ .Date.Format "02-01-2006" }}'
-        data-site='{{ .Params.site | replaceRE "^https?://([^/]+).*" "$1" }}'>
-      </span>
-    </a>
+    </div>
     {{ end }}
   </div><!-- end .links -->
   {{ template "_internal/pagination.html" . }}
