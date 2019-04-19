@@ -22,6 +22,7 @@ a {
 
 .i-octicon {
   line-height: 0;
+  display: inline-block;
 }
 
 #wrap {
@@ -75,10 +76,14 @@ a {
     margin-right: 30px;
     position: relative;
     .indicator {
+      color: var(--text);
       cursor: pointer;
+      &:hover {
+        text-decoration: none;
+      }
       .i-octicon {
         position: relative;
-        top: 2px;
+        top: 4px;
       }
       svg {
         fill: var(--link);
