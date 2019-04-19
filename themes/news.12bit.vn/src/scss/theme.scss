@@ -1,3 +1,21 @@
+$break-phone: 414px;
+$break-tablet: 768px;
+$break-desktop: 1280px;
+@mixin breakpoint($point) {
+  @if $point == phone {
+    @media (max-width: $break-phone) { @content; }
+  }
+
+  @if $point == tablet {
+    @media (max-width: $break-tablet) { @content; }
+  }
+
+  @if $point == desktop {
+    @media (max-width: $break-desktop) { @content; }
+  }
+}
+
+
 .dark {
   --bg: #1a1f23;
   --bg-lighter: #21282d;
@@ -25,6 +43,19 @@ a {
   display: inline-block;
 }
 
+.show-on-mobile {
+  display: none;
+  @include breakpoint(phone) {
+    display: block;
+  }
+}
+
+@media all and (max-width: $break-phone) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 #wrap {
   max-width: 600px;
   margin: 0 auto;
@@ -39,6 +70,9 @@ a {
   margin-bottom: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  @include breakpoint(phone) {
+    padding-bottom: 1rem;
+  }
   .logo {
     margin: 0;
     position: relative;
@@ -81,10 +115,12 @@ a {
       &:hover {
         text-decoration: none;
       }
+      * {
+        margin-left: 4px;
+      }
       .i-octicon {
         position: relative;
         top: 4px;
-        margin-right: 4px;
       }
       svg {
         fill: var(--link);
@@ -98,8 +134,20 @@ a {
         font-size: .9rem;
         font-weight: 600;
         padding: 2px 6px;
-        margin-left: 3px;
       }
+    }
+    .dropdown-list-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--link);
+      color: var(--bg-darker);
+      padding: 5px 15px;
+      z-index: 110;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
     }
     .dropdown-list {
       position: absolute;
@@ -114,11 +162,27 @@ a {
       border: 2px solid var(--text);
       z-index: 100;
       display: none;
+      @include breakpoint(phone) {
+        position: fixed;
+        top: 34px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 100%;
+        border: none;
+      }
       .link {
         padding: 15px;
         margin: 0;
         border-bottom: 2px solid var(--text);
         border-radius: 0;
+        @include breakpoint(phone) {
+          border: none;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
         &:hover {
           background-color: var(--bg);
         }
@@ -150,6 +214,11 @@ a {
       }
       .dropdown-list {
         display: block;
+      }
+      @include breakpoint(phone) {
+        .dropdown-list-header {
+          display: flex;
+        }
       }
     }
   }

@@ -49,6 +49,10 @@ document.addEventListener('click', (e) => {
   }
 })
 
+document.querySelector('.js-b-close-mobile-dropdown').addEventListener('click', () => {
+  hideDropdown()
+})
+
 // Add/remove bookmark
 document.querySelectorAll('.js-b-additem').forEach(node => {
   node.addEventListener('click', (e) => {
