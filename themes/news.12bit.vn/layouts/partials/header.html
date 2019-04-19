@@ -36,7 +36,17 @@
             <span class="brand">links</span>
           </a>
         </h1>
-      <a class="button" href="{{ .Site.Params.cta.url }}" target="_blank" rel="nofollow noopener">
-        {{ .Site.Params.cta.title }}
-      </a>
+        <div class="navigation">
+          <div class="bookmark" title="Your bookmark links">
+            <div class="js-b-indicator indicator">
+              <span class="octicon" data-icon="star"></span>
+              Bookmark
+              <span class="js-b-counter counter">0</span>
+            </div>
+            <div class="js-b-dropdown dropdown-list"></div>
+          </div>
+          <a class="button" href="{{ .Site.Params.cta.url }}" target="_blank" rel="nofollow noopener">
+            {{ .Site.Params.cta.title }}
+          </a>
+        </div>
     </header><!-- end #masthead -->

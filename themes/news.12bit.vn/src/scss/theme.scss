@@ -1,6 +1,7 @@
 .dark {
   --bg: #1a1f23;
-  --darker: #101518;
+  --bg-lighter: #21282d;
+  --bg-darker: #101518;
   --text: #aeadad;
   --link: #0cc387;
 }
@@ -58,6 +59,86 @@ a {
       background-color: var(--link);
     }
   }
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .bookmark {
+    margin-right: 30px;
+    position: relative;
+    .indicator {
+      cursor: pointer;
+      .octicon {
+        position: relative;
+        top: 2px;
+      }
+      svg {
+        fill: var(--link);
+        width: 20px;
+        height: 20px;
+      }
+      .counter {
+        background-color: var(--text);
+        color: var(--bg-darker);
+        border-radius: 20px;
+        font-size: .9rem;
+        font-weight: 600;
+        padding: 2px 6px;
+        margin-left: 3px;
+      }
+    }
+    .dropdown-list {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -150px;
+      width: 300px;
+      max-height: 400px;
+      overflow-y: auto;
+      background-color: var(--bg-lighter);
+      border-radius: 6px;
+      border: 2px solid var(--text);
+      z-index: 100;
+      display: none;
+      .link {
+        padding: 15px;
+        margin: 0;
+        border-bottom: 2px solid var(--text);
+        border-radius: 0;
+        &:hover {
+          background-color: var(--bg);
+        }
+        &:before {
+          display: none;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        h1 {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      .no-item {
+        display: block;
+        padding: 35px;
+        text-align: center;
+      }
+    }
+    /* Show bookmark */
+    &.show {
+      .indicator {
+        color: #fff;
+      }
+      svg {
+        fill: #fff;
+      }
+      .dropdown-list {
+        display: block;
+      }
+    }
+  }
+
 }
 
 #content {
@@ -79,10 +160,14 @@ a {
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: relative;
   &:hover {
     background-color: #101518;
     h1 {
       text-decoration: underline;
+    }
+    span.octicon {
+      display: block;
     }
   }
   &:before {
@@ -103,6 +188,11 @@ a {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin: 0 0 0.5rem 0;
+    @at-root .links {
+      h1 {
+        padding-right: 20px;
+      }
+    }
   }
   p {
     margin-top: 0;
@@ -111,6 +201,21 @@ a {
   p {
     color: var(--text);
     font-size: .9rem;
+  }
+  span.octicon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    display: none;
+    svg {
+      fill: var(--text);
+      width: 20px;
+      height: 20px;
+    }
+    &.added svg {
+      fill: var(--link);
+    }
   }
 }
 
