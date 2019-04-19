@@ -1,7 +1,7 @@
 languageCode: vi-vn
 copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 title: 12bit.vn links
-description: Tổng hợp link từ nhiều tech blog Tiếng Việt.
+description: Browse multiple Vietnamese tech blogs at the same time.
 baseURL: https://news.12bit.vn/
 theme: news.12bit.vn
 enableGitInfo: true
@@ -14,7 +14,7 @@ outputs:
   - HTML
   - RSS
 params:
-  description: Tổng hợp link từ nhiều tech blog Tiếng Việt.
+  description: Browse multiple Vietnamese tech blogs at the same time.
   favicon: img/favicon.png
   images:
     - img/home.png
