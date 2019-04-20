@@ -23,9 +23,10 @@ yarn install
 
 **Start webpack development & local server**
 
+You may need to run the both commands at the same time.
+
 ```
 yarn dev
-# then
 hugo serve
 ```
 
