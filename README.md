@@ -21,10 +21,11 @@ Since Netlify does not support Hugo extended version that allows Hugo converts S
 yarn install
 ```
 
-**Start the local server**
+**Start webpack development & local server**
 
 ```
 yarn dev
+# then
 hugo serve
 ```
 
