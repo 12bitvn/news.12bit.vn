@@ -271,8 +271,18 @@ a {
     font-size: .9rem;
   }
   .save {
-    &:hover {
-      text-decoration: underline;
+    position: relative;
+    top: 4px;
+    svg {
+      fill: var(--text);
+      width: 20px;
+      height: 20px
+    }
+    &:hover,
+    &.added {
+      svg {
+        fill: var(--link);
+      }
     }
   }
 }

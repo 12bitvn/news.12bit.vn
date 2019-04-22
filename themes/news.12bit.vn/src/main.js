@@ -30,7 +30,6 @@ let b = Bookmark({
 b.data.items.forEach(item => {
   document.querySelectorAll(`[data-link="${item.link}"]`).forEach(node => {
     node.classList.add('added')
-    node.textContent = 'remove bookmark'
   })
 })
 
@@ -67,7 +66,6 @@ document.querySelectorAll('.js-b-additem').forEach(node => {
       }
 
       node.classList.add('added')
-      node.textContent = 'remove bookmark'
 
       items.push({
         link: link,
@@ -83,7 +81,6 @@ document.querySelectorAll('.js-b-additem').forEach(node => {
       })
 
       node.classList.remove('added')
-      node.textContent = 'bookmark'
 
       b.data.items = items
     }
@@ -111,5 +108,4 @@ document.addEventListener('click', (e) => {
 
   let addedNode = document.querySelector(`[data-link="${link}"]`)
   addedNode.classList.remove('added')
-  addedNode.textContent = 'bookmark'
 })
