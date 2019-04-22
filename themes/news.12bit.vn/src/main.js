@@ -35,7 +35,8 @@ b.data.items.forEach(item => {
 })
 
 // Toggle show/hide dropdown
-document.querySelector('.js-b-indicator').addEventListener('click', () => {
+document.querySelector('.js-b-indicator').addEventListener('click', (e) => {
+  e.preventDefault()
   if (!bookmarkNode.classList.contains('show')) {
     showDropdown()
   } else {
@@ -99,11 +100,16 @@ document.addEventListener('click', (e) => {
 
   e.preventDefault()
 
+  let link = e.target.getAttribute('data-id')
   let items = b.data.items.filter(item => {
-    return item.link !== e.target.getAttribute('data-id')
+    return item.link !== link
   })
 
   b.data.items = items
 
   localStorage.setItem('bookmark_items', JSON.stringify(items))
+
+  let addedNode = document.querySelector(`[data-link="${link}"]`)
+  addedNode.classList.remove('added')
+  addedNode.textContent = 'bookmark'
 })
