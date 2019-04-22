@@ -28,5 +28,14 @@
   },
   {
     "rss_url": "https://medium.com/feed/on-coding"
+  },
+  {
+    "rss_url": "https://hackernoon.com/feed"
+  },
+  {
+    "rss_url": "https://medium.freecodecamp.org/feed"
+  },
+  {
+    "rss_url": "http://feeds.feedburner.com/CssTricks?fmt=xml"
   }
 ]
