@@ -270,6 +270,11 @@ a {
     color: var(--text);
     font-size: .9rem;
   }
+  .meta {
+    .divider{
+      margin: 0 10px;
+    }
+  }
   .save {
     position: relative;
     top: 4px;
