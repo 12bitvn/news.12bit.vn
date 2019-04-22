@@ -6,7 +6,7 @@
     <div class="link" target="_blank" rel="nofollow noopener">
       <h1><a href="{{ .Params.link }}" target="_blank" rel="nofollow noopener">{{ .Title }}</a></h1>
       <div class="meta">
-        <span>{{ .Date.Format "02-01-2006" }} by <a href="http://{{ .Params.site }}" target="_blank" rel="nofollow noopener">{{ .Params.site }}</a></span>
+        <span>{{ .Date.Format "02-01-2006" }} by <a href="http://{{ .Params.site }}" target="_blank" rel="nofollow noopener">{{ .Params.site | replaceRE "^www.([^/]+).*" "$1" }}</a></span>
         <span> | </span>
         <a
           href="#"
@@ -15,7 +15,7 @@
           data-link="{{ .Params.link }}"
           data-title={{ .Title }}
           data-date='{{ .Date.Format "02-01-2006" }}'
-          data-site='{{ .Params.site | replaceRE "^https?://([^/]+).*" "$1" }}'>
+          data-site='{{ .Params.site | replaceRE "^www.([^/]+).*" "$1" }}'>
           bookmark
         </a>
       </div>
