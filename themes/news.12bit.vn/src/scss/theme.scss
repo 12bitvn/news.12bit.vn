@@ -274,14 +274,16 @@ a {
     position: relative;
     top: 4px;
     svg {
-      fill: var(--text);
-      width: 20px;
-      height: 20px
+      fill: transparent;
+      stroke: var(--text);
+      width: 15px;
+      height: 15px;
     }
     &:hover,
     &.added {
       svg {
         fill: var(--link);
+        stroke: var(--link);
       }
     }
   }
