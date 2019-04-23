@@ -1,44 +1,42 @@
-[
-  {
+{
+  "12bit.vn": {
+    "title": "12bit",
     "rss_url": "https://12bit.vn/articles/index.xml"
   },
-  {
-    "rss_url": "https://thefullsnack.com/rss.xml"
+  "thefullsnack.com": {
+    "rss_url": "https:///thefullsnack.com/rss.xml"
   },
-  {
+  "completejavascript.com": {
     "rss_url": "https://completejavascript.com/feed/"
   },
-  {
+  "quan-cam.com": {
     "rss_url": "http://quan-cam.com/rss"
   },
-  {
+  "toidicodedao.com": {
     "rss_url": "https://toidicodedao.com/feed/"
   },
-  {
+  "ehkoo.com": {
     "rss_url": "https://ehkoo.com/rss.xml"
   },
-  {
+  "alligator.io": {
     "rss_url": "https://alligator.io/feed.xml"
   },
-  {
-    "rss_url":"https://www.smashingmagazine.com/feed/"
+  "www.smashingmagazine.com": {
+    "rss_url": "https://www.smashingmagazine.com/feed/"
   },
-  {
+  "huydx.com": {
     "rss_url": "https://huydx.com/rss"
   },
-  {
+  "medium.com/on-coding": {
     "rss_url": "https://medium.com/feed/on-coding"
   },
-  {
+  "hackernoon.com": {
     "rss_url": "https://hackernoon.com/feed"
   },
-  {
+  "medium.freecodecamp.org": {
     "rss_url": "https://medium.freecodecamp.org/feed"
   },
-  {
+  "css-tricks.com": {
     "rss_url": "http://feeds.feedburner.com/CssTricks?fmt=xml"
-  },
-  {
-    "rss_url": "https://viblo.asia/rss"
   }
-]
+}
