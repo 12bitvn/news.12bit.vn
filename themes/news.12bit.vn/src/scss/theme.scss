@@ -322,3 +322,18 @@ a {
   padding-bottom: 1rem;
   font-size: .8rem;
 }
+
+
+#languages-nav {
+  margin-bottom: 2rem;
+  a {
+    margin-right: 20px;
+    color: var(--text);
+    text-transform: capitalize;
+    &.active {
+      color: var(--link);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}

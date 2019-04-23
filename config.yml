@@ -29,3 +29,5 @@ menu:
   - identifier: contribute
     title: Thêm links
     url: /pages/about.html
+taxonomies:
+  language: language

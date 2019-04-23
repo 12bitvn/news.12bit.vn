@@ -54,3 +54,14 @@
           </a>
         </div>
     </header><!-- end #masthead -->
+
+    <section id="languages-nav">
+      <nav role="navigation">
+        <a href="/" class="{{ if (.Page.IsHome) }}active{{ end }}">All</a>
+
+        {{ $pagePermalink := .Page.Permalink }}
+        {{ range .Site.Taxonomies.language }}
+        <a href="{{ .Page.Permalink }}" class="{{ if eq $pagePermalink .Page.Permalink }}active{{ end }}">{{ .Page.Title }}</a>
+        {{ end }}
+      </nav>
+    </section>
