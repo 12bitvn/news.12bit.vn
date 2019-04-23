@@ -37,5 +37,8 @@
   },
   {
     "rss_url": "http://feeds.feedburner.com/CssTricks?fmt=xml"
+  },
+  {
+    "rss_url": "https://viblo.asia/rss"
   }
 ]
