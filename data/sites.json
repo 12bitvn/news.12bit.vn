@@ -1,42 +1,53 @@
 {
   "12bit.vn": {
-    "title": "12bit",
-    "rss_url": "https://12bit.vn/articles/index.xml"
+    "rss_url": "https://12bit.vn/articles/index.xml",
+    "language": "Vietnamese"
   },
   "thefullsnack.com": {
-    "rss_url": "https:///thefullsnack.com/rss.xml"
+    "rss_url": "https:///thefullsnack.com/rss.xml",
+    "language": "Vietnamese"
   },
   "completejavascript.com": {
     "rss_url": "https://completejavascript.com/feed/"
   },
   "quan-cam.com": {
-    "rss_url": "http://quan-cam.com/rss"
+    "rss_url": "http://quan-cam.com/rss",
+    "language": "Vietnamese"
   },
   "toidicodedao.com": {
-    "rss_url": "https://toidicodedao.com/feed/"
+    "rss_url": "https://toidicodedao.com/feed/",
+    "language": "Vietnamese"
   },
   "ehkoo.com": {
-    "rss_url": "https://ehkoo.com/rss.xml"
+    "rss_url": "https://ehkoo.com/rss.xml",
+    "language": "Vietnamese"
   },
   "alligator.io": {
-    "rss_url": "https://alligator.io/feed.xml"
+    "rss_url": "https://alligator.io/feed.xml",
+    "language": "English"
   },
   "www.smashingmagazine.com": {
-    "rss_url": "https://www.smashingmagazine.com/feed/"
+    "rss_url": "https://www.smashingmagazine.com/feed/",
+    "language": "English"
   },
   "huydx.com": {
-    "rss_url": "https://huydx.com/rss"
+    "rss_url": "https://huydx.com/rss",
+    "language": "Vietnamese"
   },
   "medium.com/on-coding": {
-    "rss_url": "https://medium.com/feed/on-coding"
+    "rss_url": "https://medium.com/feed/on-coding",
+    "language": "English"
   },
   "hackernoon.com": {
-    "rss_url": "https://hackernoon.com/feed"
+    "rss_url": "https://hackernoon.com/feed",
+    "language": "English"
   },
   "medium.freecodecamp.org": {
-    "rss_url": "https://medium.freecodecamp.org/feed"
+    "rss_url": "https://medium.freecodecamp.org/feed",
+    "language": "English"
   },
   "css-tricks.com": {
-    "rss_url": "http://feeds.feedburner.com/CssTricks?fmt=xml"
+    "rss_url": "http://feeds.feedburner.com/CssTricks?fmt=xml",
+    "language": "English"
   }
 }
