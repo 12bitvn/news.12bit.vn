@@ -50,5 +50,9 @@
   "css-tricks.com": {
     "rss_url": "http://feeds.feedburner.com/CssTricks?fmt=xml",
     "language": "English"
+  },
+  "codeaholicguy.com": {
+    "rss_url": "https://codeaholicguy.com/feed",
+    "language": "Vietnamese"
   }
 }
