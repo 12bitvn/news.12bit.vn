@@ -7,7 +7,7 @@ theme: news.12bit.vn
 enableGitInfo: true
 enableEmoji: true
 enableRobotsTXT: true
-googleAnalytics:
+googleAnalytics: UA-131517577-3
 paginate: 40
 outputs:
   home:
