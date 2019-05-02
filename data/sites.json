@@ -54,5 +54,9 @@
   "codeaholicguy.com": {
     "rss_url": "https://codeaholicguy.com/feed",
     "language": "Vietnamese"
+  },
+  "medium.com/google-developers": {
+    "rss_url": "https://medium.com/feed/google-developers",
+    "language": "English"
   }
 }
