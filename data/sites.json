@@ -54,5 +54,13 @@
   "medium.com/google-developers": {
     "rss_url": "https://medium.com/feed/google-developers",
     "language": "English"
+  },
+  "blog.bitsrc.io": {
+    "rss_url": "https://blog.bitsrc.io/feed",
+    "language": "English"
+  },
+  "blog.chromium.org": {
+    "rss_url": "https://blog.chromium.org/feeds/posts/default?alt=rss",
+    "language": "English"
   }
 }
