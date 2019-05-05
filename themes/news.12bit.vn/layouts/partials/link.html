@@ -1,7 +1,7 @@
 <div class="link" target="_blank" rel="nofollow noopener">
   <h1><a href="{{ .Params.link }}" target="_blank" rel="nofollow noopener">{{ .Title }}</a></h1>
   <div class="meta">
-    <span>{{ .Date.Format "02-01-2006" }} by <a href="http://{{ .Params.site }}" target="_blank" rel="nofollow noopener">{{ .Params.site | replaceRE "^www.([^/]+).*" "$1" }}</a></span>
+    <span>{{ .Date.Format "02-01-2006" }} by <a href="/site/{{ .Params.site }}" rel="nofollow noopener">{{ .Params.site | replaceRE "^www.([^/]+).*" "$1" }}</a></span>
     <span class="divider">&#8226;</span>
     <a
       href="#"

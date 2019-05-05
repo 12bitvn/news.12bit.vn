@@ -13,6 +13,8 @@ outputs:
   home:
   - HTML
   - RSS
+disableKinds:
+  - taxonomyTerm
 params:
   description: Browse multiple web development sites at the same time.
   favicon: img/favicon.png
@@ -31,3 +33,4 @@ menu:
     url: /pages/about.html
 taxonomies:
   language: language
+  site: site
