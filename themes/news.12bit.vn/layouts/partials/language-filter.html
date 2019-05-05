@@ -1,5 +1,3 @@
-{{ partial "header" . }}
-{{ if ne .Type "site" }}
 <section id="languages-nav">
     <nav role="navigation">
         <a href="/" class="{{ if (.Page.IsHome) }}active{{ end }}">All</a>
@@ -10,14 +8,3 @@
         {{ end }}
     </nav>
 </section>
-{{ end }}
-<main id="content">
-    <div class="links">
-        {{ $paginator := .Paginate (where .Pages "Type" "links") }}
-        {{ range $paginator.Pages }}
-        {{ partial "link" . }}
-        {{ end }}
-    </div><!-- end .links -->
-    {{ template "_internal/pagination.html" . }}
-</main><!-- end #content -->
-{{ partial "footer" . }}

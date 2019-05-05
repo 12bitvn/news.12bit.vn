@@ -1,5 +1,6 @@
 {{ partial "header" . }}
-{{ partial "language-filter" . }}
+<h2><a href="{{ .Params.homepage }}" target="_blank" rel="noopener">{{ .Title }}</a></h2>
+{{ with .Description }}<p>{{ . }}</p>{{end}}
 <main id="content">
     <div class="links">
         {{ $paginator := .Paginate (where .Pages "Type" "links") }}
