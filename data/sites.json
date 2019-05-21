@@ -62,5 +62,9 @@
   "blog.chromium.org": {
     "rss_url": "https://blog.chromium.org/feeds/posts/default?alt=rss",
     "language": "English"
+  },
+  "viblo.asia": {
+    "rss_url": "https://viblo.asia/rss",
+    "language": "Vietnamese"
   }
 }
