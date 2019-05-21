@@ -66,5 +66,13 @@
   "viblo.asia": {
     "rss_url": "https://viblo.asia/rss",
     "language": "Vietnamese"
+  },
+  "laraveldaily.com": {
+    "rss_url": "https://laraveldaily.com/feed",
+    "language": "English"
+  },
+  "laravel-tricks.com": {
+    "rss_url": "https://laravel-tricks.com/feed",
+    "language": "English"
   }
 }
