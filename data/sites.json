@@ -74,5 +74,9 @@
   "laravel-tricks.com": {
     "rss_url": "https://laravel-tricks.com/feed",
     "language": "English"
+  },
+  "kipalog.com": {
+    "rss_url": "http://kipalog.com/posts/rss?api_key=fdo2atlx1gxkd3pf4ouzr263eoaq7b",
+    "language": "Vietnamese"
   }
 }
