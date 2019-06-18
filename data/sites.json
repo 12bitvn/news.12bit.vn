@@ -74,5 +74,9 @@
   "kipalog.com": {
     "rss_url": "http://kipalog.com/posts/rss?api_key=fdo2atlx1gxkd3pf4ouzr263eoaq7b",
     "language": "Vietnamese"
+  },
+  "medium.com/system-design-blog": {
+    "rss_url": "https://medium.com/feed/system-design-blog",
+    "language": "English"
   }
 }
