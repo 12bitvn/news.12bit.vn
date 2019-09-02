@@ -6,7 +6,6 @@ site: css-tricks.com
 language: English
 category:
   - Article
-  - @supports
   - media queries
   - nesting
 draft: false
