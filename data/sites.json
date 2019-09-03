@@ -78,5 +78,9 @@
   "medium.com/system-design-blog": {
     "rss_url": "https://medium.com/feed/system-design-blog",
     "language": "English"
+  },
+  "medium.com/dailyjs": {
+    "rss_url": "https://medium.com/feed/dailyjs",
+    "language": "English"
   }
 }
