@@ -6,7 +6,7 @@ site: css-tricks.com
 language: English
 category:
   - Article
-  - @supports
+  - supports
   - checkboxes
   - custom properties
   - forms
