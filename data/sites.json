@@ -86,5 +86,9 @@
   "dev.to": {
     "rss_url": "https://dev.to/feed",
     "language": "English"
+  },
+  "stackcoder.in": {
+    "rss_url": "https://stackcoder.in/rss.xml",
+    "language": "English"
   }
 }
