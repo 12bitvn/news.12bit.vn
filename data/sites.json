@@ -4,7 +4,7 @@
     "language": "Vietnamese"
   },
   "thefullsnack.com": {
-    "rss_url": "https:///thefullsnack.com/rss.xml",
+    "rss_url": "https://thefullsnack.com/rss.xml",
     "language": "Vietnamese"
   },
   "completejavascript.com": {
@@ -82,5 +82,17 @@
   "nghethuatcoding.com": {
     "rss_url": "https://nghethuatcoding.com/feed",
     "language": "Vietnamese"
+  },
+  "medium.com/dailyjs": {
+    "rss_url": "https://medium.com/feed/dailyjs",
+    "language": "English"
+  },
+  "dev.to": {
+    "rss_url": "https://dev.to/feed",
+    "language": "English"
+  },
+  "stackcoder.in": {
+    "rss_url": "https://stackcoder.in/rss.xml",
+    "language": "English"
   }
 }
