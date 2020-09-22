@@ -79,6 +79,10 @@
     "rss_url": "https://medium.com/feed/system-design-blog",
     "language": "English"
   },
+  "nghethuatcoding.com": {
+    "rss_url": "https://nghethuatcoding.com/feed",
+    "language": "Vietnamese"
+  },
   "medium.com/dailyjs": {
     "rss_url": "https://medium.com/feed/dailyjs",
     "language": "English"
