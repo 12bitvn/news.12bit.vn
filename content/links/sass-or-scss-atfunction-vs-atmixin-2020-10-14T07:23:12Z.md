@@ -1,0 +1,8 @@
+---
+title: "Sass or SCSS @function vs @mixin"
+date: 2020-10-14T07:23:12Z
+link: https://stackcoder.in/posts/sass-or-scss-function-vs-mixin?utm_medium=RSS&utm_source=news.12bit.vn
+site: stackcoder.in
+language: English
+draft: false
+---
