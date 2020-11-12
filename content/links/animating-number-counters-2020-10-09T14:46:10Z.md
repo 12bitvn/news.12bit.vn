@@ -6,7 +6,7 @@ site: css-tricks.com
 language: English
 category:
   - Article
-  - @property
+  - property
   - calc
   - content
   - counters
