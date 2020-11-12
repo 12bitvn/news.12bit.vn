@@ -9,11 +9,13 @@
   },
   "completejavascript.com": {
     "rss_url": "https://completejavascript.com/feed/",
-    "language": "Vietnamese"
+    "language": "Vietnamese",
+    "status": "archived"
   },
   "quan-cam.com": {
     "rss_url": "http://quan-cam.com/rss",
-    "language": "Vietnamese"
+    "language": "Vietnamese",
+    "status": "archived"
   },
   "toidicodedao.com": {
     "rss_url": "https://toidicodedao.com/feed/",
@@ -33,7 +35,8 @@
   },
   "huydx.com": {
     "rss_url": "https://huydx.com/rss",
-    "language": "Vietnamese"
+    "language": "Vietnamese",
+    "status": "archived"
   },
   "hackernoon.com": {
     "rss_url": "https://hackernoon.com/feed",
@@ -49,7 +52,8 @@
   },
   "codeaholicguy.com": {
     "rss_url": "https://codeaholicguy.com/feed",
-    "language": "Vietnamese"
+    "language": "Vietnamese",
+    "status": "archived"
   },
   "medium.com/google-developers": {
     "rss_url": "https://medium.com/feed/google-developers",
@@ -82,7 +86,8 @@
   },
   "nghethuatcoding.com": {
     "rss_url": "https://nghethuatcoding.com/feed",
-    "language": "Vietnamese"
+    "language": "Vietnamese",
+    "status": "archived"
   },
   "medium.com/dailyjs": {
     "rss_url": "https://medium.com/feed/dailyjs",
