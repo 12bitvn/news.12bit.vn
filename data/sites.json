@@ -65,7 +65,8 @@
   },
   "laraveldaily.com": {
     "rss_url": "https://laraveldaily.com/feed",
-    "language": "English"
+    "language": "English",
+    "status": "archived"
   },
   "laravel-tricks.com": {
     "rss_url": "https://laravel-tricks.com/feed",
