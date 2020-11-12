@@ -100,5 +100,9 @@
   "stackcoder.in": {
     "rss_url": "https://stackcoder.in/rss.xml",
     "language": "English"
-  }
+  },
+  "calhoun.io": {
+    "rss_url": "https://www.calhoun.io/rss/index.xml",
+    "language": "English"
+  } 
 }
