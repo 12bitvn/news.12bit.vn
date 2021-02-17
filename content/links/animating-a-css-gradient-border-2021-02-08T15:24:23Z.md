@@ -6,7 +6,7 @@ site: css-tricks.com
 language: English
 category:
   - Link
-  - @property
+  - property
   - border
   - css animation
   - gradients
