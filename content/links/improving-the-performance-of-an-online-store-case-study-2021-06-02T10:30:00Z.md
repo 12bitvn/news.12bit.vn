@@ -1,0 +1,8 @@
+---
+title: "Improving The Performance Of An Online Store (Case Study)"
+date: 2021-06-02T10:30:00Z
+link: https://smashingmagazine.com/2021/06/front-end-performance-online-store-jewellerybox/?utm_medium=RSS&utm_source=news.12bit.vn
+site: www.smashingmagazine.com
+language: English
+draft: false
+---
